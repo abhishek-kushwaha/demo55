@@ -1,0 +1,10 @@
+<%= simple_form_for @forum, :html => { :class => 'form-horizontal' } do |f| %>
+  <legend><%= controller.action_name.capitalize %> Forum</legend>
+    <%= f.input :name %><br />
+    <%= f.input :description %>
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                forums_path, :class => 'btn' %>
+  </div>
+<% end %>
